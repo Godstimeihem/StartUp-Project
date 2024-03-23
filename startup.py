@@ -89,11 +89,6 @@ inputs['R&D Spend'] = rd_spend_scale.transform(inputs[['R&D Spend']])
 inputs['Administration'] = mgt_scale.transform(inputs[['Administration']])
 inputs['Marketing Spend'] = mkt_scale.transform(inputs[['Marketing Spend']])
 
-st.subheader('Transformed Input Variables')
-st.dataframe(inputs)
-
-
-
 prediction_button = st.button('Predict Profitability')
 if prediction_button:
    predicted = lin_reg.predict(inputs)
